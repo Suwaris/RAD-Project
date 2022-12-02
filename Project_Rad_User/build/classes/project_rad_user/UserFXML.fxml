@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="689.0" prefWidth="1000.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project_rad_user.UserFXMLController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <SplitPane prefHeight="712.0" prefWidth="1035.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="673.0" prefWidth="998.0" style="-fx-background-color: #000000;" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button layoutX="711.0" layoutY="526.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="157.0" style="-fx-background-color: #52D017;" text="Print Above Details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="351.0" fitWidth="430.0" layoutX="560.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Desktop/IMG-20210801-WA0028.jpg" />
+                     </image>
+                  </ImageView>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="711.0" prefWidth="545.0" style="-fx-background-color: #800000;">
+                     <children>
+                        <TextField fx:id="searchBox" layoutX="27.0" layoutY="24.0" onAction="#search_item" prefHeight="43.0" prefWidth="441.0" promptText="Seach Your Item" style="-fx-border-color: #000000; -fx-border-width: 2;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField alignment="CENTER" layoutX="192.0" layoutY="83.0" prefHeight="34.0" prefWidth="148.0" promptText="Availability" style="-fx-border-color: #000000; -fx-border-width: 2; -fx-background-color: #FF0000;">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TableView fx:id="tableView" layoutX="25.0" layoutY="136.0" onMouseClicked="#clikedColumn" prefHeight="136.0" prefWidth="495.0">
+                          <columns>
+                            <TableColumn fx:id="itemName" prefWidth="151.0" text="Item Name" />
+                            <TableColumn fx:id="address" prefWidth="165.0" text="Address" />
+                              <TableColumn fx:id="availability" prefWidth="205.0" text="Availability" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="38.0" layoutY="308.0" prefHeight="31.0" prefWidth="185.0" text="Selected Item List" textFill="#fffffffc">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="selected_ItemView" layoutX="31.0" layoutY="356.0" prefHeight="281.0" prefWidth="484.0">
+                          <columns>
+                            <TableColumn fx:id="seleced_itemName" prefWidth="203.0" text="Item Name" />
+                            <TableColumn fx:id="selected_address" prefWidth="280.0" text="Address" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="721.0" layoutY="225.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #2B65EC;" text="A">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="761.0" layoutY="225.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #FFA500;" text="B">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="801.0" layoutY="225.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #E55451;" text="C">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="841.0" layoutY="225.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #36F57F;" text="D">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="720.0" layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #D2691E;" text="P">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="773.0" layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #E8A317;" text="Q">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="638.0" layoutY="167.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="32.0" style="-fx-background-color: #FFDB58;" text="M">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="893.0" layoutY="81.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #5CB3FF;" text="S">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="721.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #00FF00;" text="E">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="801.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #6960EC;" text="G">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="761.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #EE9A4D;" text="F" />
+                  <Button layoutX="841.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #FF6700;" text="H">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="721.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #FFFF00;" text="I">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="761.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #3EB489;" text="J">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="801.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #CD7F32;" text="K">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="841.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: #DA70D6;" text="L">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="669.0" layoutY="79.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #77DD77;" text="O">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="824.0" layoutY="81.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #CB6D51;" text="R">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="638.0" layoutY="80.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="32.0" style="-fx-background-color: #C04000;" text="N">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="924.0" layoutY="106.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="32.0" style="-fx-background-color: #34A56F;" text="T">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="924.0" layoutY="212.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="32.0" style="-fx-background-color: #C34A2C;" text="U">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="720.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #B666D2;" text="Cashier">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="770.0" layoutY="203.0" text="Lane 1">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="770.0" layoutY="151.0" text="Lane 2">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="770.0" layoutY="101.0" text="Lane 3">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="680.0" layoutY="132.0" text="L&#10;a&#10;n&#10;e&#10;4">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="903.0" layoutY="132.0" text="L&#10;a&#10;n&#10;e&#10;5">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="670.0" layoutY="298.0" text="Entrance">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</GridPane>
